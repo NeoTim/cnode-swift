@@ -13,11 +13,6 @@
 		7B0732292085C64A00E12987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0732272085C64A00E12987 /* LaunchScreen.storyboard */; };
 		7B0A1F8F208624DA007743A2 /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A1F8E208624DA007743A2 /* TopicCell.xib */; };
 		7B0A1F912086354C007743A2 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A1F902086354C007743A2 /* TopicCell.swift */; };
-		7B1298C9208B952A0049BA7E /* UserRepliedTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298C4208B952A0049BA7E /* UserRepliedTopicsViewController.swift */; };
-		7B1298CA208B952A0049BA7E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298C5208B952A0049BA7E /* UserViewController.swift */; };
-		7B1298CB208B952A0049BA7E /* UserCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298C6208B952A0049BA7E /* UserCollectionViewController.swift */; };
-		7B1298CC208B952A0049BA7E /* UserMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298C7208B952A0049BA7E /* UserMessageViewController.swift */; };
-		7B1298CD208B952A0049BA7E /* UserCreatedTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298C8208B952A0049BA7E /* UserCreatedTopicsViewController.swift */; };
 		7B1298CF208B95800049BA7E /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1298CE208B95800049BA7E /* MessageCell.swift */; };
 		7B1298D1208B9A610049BA7E /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1298D0208B9A610049BA7E /* MessageCell.xib */; };
 		7B29FE9420898BCE00A93D9B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29FE9320898BCE00A93D9B /* Util.swift */; };
@@ -26,9 +21,7 @@
 		7B510D5D2089D99C00B78B57 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B510D582089D99C00B78B57 /* Author.swift */; };
 		7B510D5E2089D99C00B78B57 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B510D592089D99C00B78B57 /* Topic.swift */; };
 		7B510D5F2089D99C00B78B57 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B510D5A2089D99C00B78B57 /* Tab.swift */; };
-		7B510D662089D9E700B78B57 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B510D622089D9E600B78B57 /* MenuViewController.swift */; };
 		7B59F9F52085CADD002E363F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59F9F42085CADD002E363F /* APIRequest.swift */; };
-		7B8BD0AB2091BEEF002F02E2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD0AA2091BEEF002F02E2 /* SettingViewController.swift */; };
 		7B9115A0208828E300EA734B /* Toaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B91159F208828E300EA734B /* Toaster.swift */; };
 		7B9115A220882C3600EA734B /* String+timeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9115A120882C3600EA734B /* String+timeAgo.swift */; };
 		7B9115AC20887DA600EA734B /* TopicDetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9115AB20887DA600EA734B /* TopicDetailCommentCell.swift */; };
@@ -37,10 +30,18 @@
 		7B9115B22088A96400EA734B /* TopicDetailContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B9115B12088A96400EA734B /* TopicDetailContentCell.xib */; };
 		7BA7CC5A208EE38B007E31C7 /* TopicSimpleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7CC59208EE38B007E31C7 /* TopicSimpleCell.swift */; };
 		7BA7CC5C208EE3B6007E31C7 /* TopicSimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BA7CC5B208EE3B6007E31C7 /* TopicSimpleCell.xib */; };
-		7BB0FA1F209041C9007E1E4B /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FA1C209041C9007E1E4B /* TopicViewController.swift */; };
-		7BB0FA20209041C9007E1E4B /* TopicListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FA1D209041C9007E1E4B /* TopicListsViewController.swift */; };
-		7BB0FA21209041C9007E1E4B /* TopicCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FA1E209041C9007E1E4B /* TopicCreateViewController.swift */; };
-		7BB0FA2F2090651E007E1E4B /* CommentCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB0FA2E2090651E007E1E4B /* CommentCreateViewController.swift */; };
+		7BEAA64C2099D74300DF8B0E /* CommentCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA63E2099D74300DF8B0E /* CommentCreateViewController.swift */; };
+		7BEAA64D2099D74300DF8B0E /* UserCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6402099D74300DF8B0E /* UserCollectionViewController.swift */; };
+		7BEAA64E2099D74300DF8B0E /* UserRepliedTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6412099D74300DF8B0E /* UserRepliedTopicsViewController.swift */; };
+		7BEAA64F2099D74300DF8B0E /* UserMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6422099D74300DF8B0E /* UserMessageViewController.swift */; };
+		7BEAA6502099D74300DF8B0E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6432099D74300DF8B0E /* UserViewController.swift */; };
+		7BEAA6512099D74300DF8B0E /* UserCreatedTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6442099D74300DF8B0E /* UserCreatedTopicsViewController.swift */; };
+		7BEAA6522099D74300DF8B0E /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6462099D74300DF8B0E /* TopicViewController.swift */; };
+		7BEAA6532099D74300DF8B0E /* TopicListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6472099D74300DF8B0E /* TopicListsViewController.swift */; };
+		7BEAA6542099D74300DF8B0E /* TopicCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6482099D74300DF8B0E /* TopicCreateViewController.swift */; };
+		7BEAA6552099D74300DF8B0E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA64A2099D74300DF8B0E /* SettingViewController.swift */; };
+		7BEAA6562099D74300DF8B0E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA64B2099D74300DF8B0E /* MenuViewController.swift */; };
+		7BEAA6582099D7AF00DF8B0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEAA6572099D7AF00DF8B0E /* LoginViewController.swift */; };
 		BA669ED512D212F223F9C6C7 /* Pods_cnode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93195C6044C610D6DDE56864 /* Pods_cnode.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,11 +54,6 @@
 		7B07322A2085C64A00E12987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B0A1F8E208624DA007743A2 /* TopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
 		7B0A1F902086354C007743A2 /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
-		7B1298C4208B952A0049BA7E /* UserRepliedTopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRepliedTopicsViewController.swift; path = cnode/Controller/User/UserRepliedTopicsViewController.swift; sourceTree = SOURCE_ROOT; };
-		7B1298C5208B952A0049BA7E /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = cnode/Controller/User/UserViewController.swift; sourceTree = SOURCE_ROOT; };
-		7B1298C6208B952A0049BA7E /* UserCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCollectionViewController.swift; path = cnode/Controller/User/UserCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
-		7B1298C7208B952A0049BA7E /* UserMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessageViewController.swift; path = cnode/Controller/User/UserMessageViewController.swift; sourceTree = SOURCE_ROOT; };
-		7B1298C8208B952A0049BA7E /* UserCreatedTopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCreatedTopicsViewController.swift; path = cnode/Controller/User/UserCreatedTopicsViewController.swift; sourceTree = SOURCE_ROOT; };
 		7B1298CE208B95800049BA7E /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		7B1298D0208B9A610049BA7E /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		7B29FE9320898BCE00A93D9B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -66,10 +62,7 @@
 		7B510D582089D99C00B78B57 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		7B510D592089D99C00B78B57 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		7B510D5A2089D99C00B78B57 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		7B510D622089D9E600B78B57 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = cnode/Controller/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
-		7B510D8E2089EE9300B78B57 /* MJRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = cnode/Header/MJRefresh.h; sourceTree = SOURCE_ROOT; };
 		7B59F9F42085CADD002E363F /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		7B8BD0AA2091BEEF002F02E2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7B91159F208828E300EA734B /* Toaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toaster.swift; sourceTree = "<group>"; };
 		7B9115A120882C3600EA734B /* String+timeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+timeAgo.swift"; sourceTree = "<group>"; };
 		7B9115AB20887DA600EA734B /* TopicDetailCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailCommentCell.swift; sourceTree = "<group>"; };
@@ -78,10 +71,19 @@
 		7B9115B12088A96400EA734B /* TopicDetailContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicDetailContentCell.xib; sourceTree = "<group>"; };
 		7BA7CC59208EE38B007E31C7 /* TopicSimpleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSimpleCell.swift; sourceTree = "<group>"; };
 		7BA7CC5B208EE3B6007E31C7 /* TopicSimpleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicSimpleCell.xib; sourceTree = "<group>"; };
-		7BB0FA1C209041C9007E1E4B /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicViewController.swift; path = cnode/Controller/Topic/TopicViewController.swift; sourceTree = SOURCE_ROOT; };
-		7BB0FA1D209041C9007E1E4B /* TopicListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicListsViewController.swift; path = cnode/Controller/Topic/TopicListsViewController.swift; sourceTree = SOURCE_ROOT; };
-		7BB0FA1E209041C9007E1E4B /* TopicCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicCreateViewController.swift; path = cnode/Controller/Topic/TopicCreateViewController.swift; sourceTree = SOURCE_ROOT; };
-		7BB0FA2E2090651E007E1E4B /* CommentCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCreateViewController.swift; sourceTree = "<group>"; };
+		7BEAA63B2099D72E00DF8B0E /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		7BEAA63E2099D74300DF8B0E /* CommentCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCreateViewController.swift; sourceTree = "<group>"; };
+		7BEAA6402099D74300DF8B0E /* UserCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewController.swift; sourceTree = "<group>"; };
+		7BEAA6412099D74300DF8B0E /* UserRepliedTopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepliedTopicsViewController.swift; sourceTree = "<group>"; };
+		7BEAA6422099D74300DF8B0E /* UserMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageViewController.swift; sourceTree = "<group>"; };
+		7BEAA6432099D74300DF8B0E /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		7BEAA6442099D74300DF8B0E /* UserCreatedTopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCreatedTopicsViewController.swift; sourceTree = "<group>"; };
+		7BEAA6462099D74300DF8B0E /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		7BEAA6472099D74300DF8B0E /* TopicListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicListsViewController.swift; sourceTree = "<group>"; };
+		7BEAA6482099D74300DF8B0E /* TopicCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCreateViewController.swift; sourceTree = "<group>"; };
+		7BEAA64A2099D74300DF8B0E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7BEAA64B2099D74300DF8B0E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7BEAA6572099D7AF00DF8B0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		93195C6044C610D6DDE56864 /* Pods_cnode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cnode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A51C8F27409FF97D79DE16C7 /* Pods-cnode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cnode/Pods-cnode.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B9BCB33F00B3FD5D85CC96 /* Pods-cnode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cnode.release.xcconfig"; path = "Pods/Target Support Files/Pods-cnode/Pods-cnode.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,11 +130,11 @@
 		7B07321D2085C64900E12987 /* cnode */ = {
 			isa = PBXGroup;
 			children = (
-				7B510D8D2089EE8500B78B57 /* Header */,
+				7BEAA63A2099D72E00DF8B0E /* Header */,
 				7B59F9F32085CAB1002E363F /* Util */,
 				7B6E133B2089D91600EBFDEF /* Model */,
 				7B0732312085CA8C00E12987 /* View */,
-				7B510D602089D9D600B78B57 /* Controller */,
+				7BEAA63C2099D74300DF8B0E /* Controller */,
 				7B07321E2085C64900E12987 /* AppDelegate.swift */,
 				7B0732222085C64900E12987 /* Main.storyboard */,
 				7B0732252085C64A00E12987 /* Assets.xcassets */,
@@ -159,40 +161,6 @@
 				7B1298CE208B95800049BA7E /* MessageCell.swift */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		7B1298C3208B951B0049BA7E /* User */ = {
-			isa = PBXGroup;
-			children = (
-				7B1298C5208B952A0049BA7E /* UserViewController.swift */,
-				7B1298C7208B952A0049BA7E /* UserMessageViewController.swift */,
-				7B1298C6208B952A0049BA7E /* UserCollectionViewController.swift */,
-				7B1298C8208B952A0049BA7E /* UserCreatedTopicsViewController.swift */,
-				7B1298C4208B952A0049BA7E /* UserRepliedTopicsViewController.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		7B510D602089D9D600B78B57 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7B8BD0A92091BED8002F02E2 /* Setting */,
-				7BB0FA2D2090651E007E1E4B /* Comment */,
-				7BB0FA1B209041BC007E1E4B /* Topic */,
-				7B1298C3208B951B0049BA7E /* User */,
-				7B510D622089D9E600B78B57 /* MenuViewController.swift */,
-			);
-			name = Controller;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		7B510D8D2089EE8500B78B57 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				7B510D8E2089EE9300B78B57 /* MJRefresh.h */,
-			);
-			name = Header;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7B510D8F2089FC5400B78B57 /* Topic */ = {
@@ -240,33 +208,64 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7B8BD0A92091BED8002F02E2 /* Setting */ = {
+		7BEAA63A2099D72E00DF8B0E /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				7B8BD0AA2091BEEF002F02E2 /* SettingViewController.swift */,
+				7BEAA63B2099D72E00DF8B0E /* MJRefresh.h */,
 			);
-			name = Setting;
-			path = cnode/Controller/Setting;
-			sourceTree = SOURCE_ROOT;
+			path = Header;
+			sourceTree = "<group>";
 		};
-		7BB0FA1B209041BC007E1E4B /* Topic */ = {
+		7BEAA63C2099D74300DF8B0E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7BB0FA1D209041C9007E1E4B /* TopicListsViewController.swift */,
-				7BB0FA1C209041C9007E1E4B /* TopicViewController.swift */,
-				7BB0FA1E209041C9007E1E4B /* TopicCreateViewController.swift */,
+				7BEAA63D2099D74300DF8B0E /* Comment */,
+				7BEAA63F2099D74300DF8B0E /* User */,
+				7BEAA6452099D74300DF8B0E /* Topic */,
+				7BEAA6492099D74300DF8B0E /* Setting */,
+				7BEAA64B2099D74300DF8B0E /* MenuViewController.swift */,
+				7BEAA6572099D7AF00DF8B0E /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7BEAA63D2099D74300DF8B0E /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				7BEAA63E2099D74300DF8B0E /* CommentCreateViewController.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		7BEAA63F2099D74300DF8B0E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7BEAA6402099D74300DF8B0E /* UserCollectionViewController.swift */,
+				7BEAA6412099D74300DF8B0E /* UserRepliedTopicsViewController.swift */,
+				7BEAA6422099D74300DF8B0E /* UserMessageViewController.swift */,
+				7BEAA6432099D74300DF8B0E /* UserViewController.swift */,
+				7BEAA6442099D74300DF8B0E /* UserCreatedTopicsViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7BEAA6452099D74300DF8B0E /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				7BEAA6462099D74300DF8B0E /* TopicViewController.swift */,
+				7BEAA6472099D74300DF8B0E /* TopicListsViewController.swift */,
+				7BEAA6482099D74300DF8B0E /* TopicCreateViewController.swift */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
 		};
-		7BB0FA2D2090651E007E1E4B /* Comment */ = {
+		7BEAA6492099D74300DF8B0E /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				7BB0FA2E2090651E007E1E4B /* CommentCreateViewController.swift */,
+				7BEAA64A2099D74300DF8B0E /* SettingViewController.swift */,
 			);
-			name = Comment;
-			path = cnode/Controller/Comment;
-			sourceTree = SOURCE_ROOT;
+			path = Setting;
+			sourceTree = "<group>";
 		};
 		AFBDF5400389967EA012961B /* Pods */ = {
 			isa = PBXGroup;
@@ -422,32 +421,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B1298CC208B952A0049BA7E /* UserMessageViewController.swift in Sources */,
+				7BEAA6582099D7AF00DF8B0E /* LoginViewController.swift in Sources */,
 				7B0A1F912086354C007743A2 /* TopicCell.swift in Sources */,
-				7B1298CD208B952A0049BA7E /* UserCreatedTopicsViewController.swift in Sources */,
-				7B1298C9208B952A0049BA7E /* UserRepliedTopicsViewController.swift in Sources */,
+				7BEAA6512099D74300DF8B0E /* UserCreatedTopicsViewController.swift in Sources */,
+				7BEAA6502099D74300DF8B0E /* UserViewController.swift in Sources */,
+				7BEAA64E2099D74300DF8B0E /* UserRepliedTopicsViewController.swift in Sources */,
+				7BEAA6542099D74300DF8B0E /* TopicCreateViewController.swift in Sources */,
 				7B510D5B2089D99C00B78B57 /* Comment.swift in Sources */,
 				7B9115B02088A8CA00EA734B /* TopicDetailContentCell.swift in Sources */,
-				7BB0FA21209041C9007E1E4B /* TopicCreateViewController.swift in Sources */,
-				7BB0FA20209041C9007E1E4B /* TopicListsViewController.swift in Sources */,
+				7BEAA6562099D74300DF8B0E /* MenuViewController.swift in Sources */,
 				7B1298CF208B95800049BA7E /* MessageCell.swift in Sources */,
 				7B29FE9420898BCE00A93D9B /* Util.swift in Sources */,
 				7B9115A0208828E300EA734B /* Toaster.swift in Sources */,
-				7BB0FA1F209041C9007E1E4B /* TopicViewController.swift in Sources */,
+				7BEAA6552099D74300DF8B0E /* SettingViewController.swift in Sources */,
+				7BEAA64D2099D74300DF8B0E /* UserCollectionViewController.swift in Sources */,
+				7BEAA6522099D74300DF8B0E /* TopicViewController.swift in Sources */,
+				7BEAA64C2099D74300DF8B0E /* CommentCreateViewController.swift in Sources */,
 				7B510D5D2089D99C00B78B57 /* Author.swift in Sources */,
-				7B510D662089D9E700B78B57 /* MenuViewController.swift in Sources */,
+				7BEAA64F2099D74300DF8B0E /* UserMessageViewController.swift in Sources */,
 				7BA7CC5A208EE38B007E31C7 /* TopicSimpleCell.swift in Sources */,
 				7B9115A220882C3600EA734B /* String+timeAgo.swift in Sources */,
-				7B1298CB208B952A0049BA7E /* UserCollectionViewController.swift in Sources */,
 				7B59F9F52085CADD002E363F /* APIRequest.swift in Sources */,
 				7B510D5C2089D99C00B78B57 /* Message.swift in Sources */,
 				7B07321F2085C64900E12987 /* AppDelegate.swift in Sources */,
 				7B510D5F2089D99C00B78B57 /* Tab.swift in Sources */,
-				7BB0FA2F2090651E007E1E4B /* CommentCreateViewController.swift in Sources */,
-				7B8BD0AB2091BEEF002F02E2 /* SettingViewController.swift in Sources */,
+				7BEAA6532099D74300DF8B0E /* TopicListsViewController.swift in Sources */,
 				7B9115AC20887DA600EA734B /* TopicDetailCommentCell.swift in Sources */,
 				7B510D5E2089D99C00B78B57 /* Topic.swift in Sources */,
-				7B1298CA208B952A0049BA7E /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

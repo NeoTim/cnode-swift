@@ -13,8 +13,8 @@
 ![](./screenshots/readme/9.PNG) | ![](./screenshots/readme/10.PNG) | ![](./screenshots/readme/11.PNG) | ![](./screenshots/readme/12.PNG)
 个人页 | 收藏 | 最近创建 | 最近回复
 ![](./screenshots/readme/13.PNG) | ![](./screenshots/readme/14.PNG) | ![](./screenshots/readme/15.PNG) | ![](./screenshots/readme/16.PNG)
-我的消息 | 设置
-![](./screenshots/readme/17.PNG) | ![](./screenshots/readme/18.PNG)
+我的消息 | 设置 | 登录页 | 隐私协议
+![](./screenshots/readme/17.PNG) | ![](./screenshots/readme/18.PNG) | ![](./screenshots/readme/19.png) | ![](./screenshots/readme/20.png)
 
 ## Known bugs
 
@@ -24,3 +24,4 @@
 
 - 优化细节 & bug fix
 - 重构代码
+

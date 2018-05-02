@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import SwiftQRScanner
 
 class MenuViewController: UITableViewController {
   @IBOutlet weak var avatarImage: UIImageView!
@@ -47,23 +46,9 @@ class MenuViewController: UITableViewController {
     // 用户
     if indexPath.section == 0 {
       let userDic = Util.getUserInfo()
-      // 未登录->扫码
+      // 未登录
       if userDic == nil {
-        // 隐私协议声明
-        let alertController = UIAlertController(title: "隐私协议声明",
-                                                message: "您是否同意“关于”中的《隐私协议》？",
-                                                preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "不同意", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "同意", style: .default, handler: {
-          action in
-          // 同意后才可以扫码
-          let scanner = QRCodeScannerController()
-          scanner.delegate = self
-          self.present(scanner, animated: true, completion: nil)
-        })
-        alertController.addAction(cancelAction)
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
+        performSegue(withIdentifier: "showLogin", sender: nil)
       } else {
         // 已登录->个人页
         performSegue(withIdentifier: "showUser", sender: userDic!["loginname"])
@@ -102,34 +87,5 @@ class MenuViewController: UITableViewController {
     avatarImage.layer.cornerRadius = 40
     avatarImage.clipsToBounds = true
     loginnameLabel.text = userDic!["loginname"] as! String
-  }
-}
-
-extension MenuViewController: QRScannerCodeDelegate {
-  // 扫码成功
-  func qrScanner(_ controller: UIViewController, scanDidComplete result: String) {
-    APIRequest.checkAccessToken(accessToken: result, callback: { (err: String?, userDic: [String: String]?) in
-      if err != nil {
-        Toaster.showToast(str: err!)
-        return
-      }
-      Util.setUserInfo(userDic: userDic!)
-      // 重绘，显示头像和名字
-      self.tableView.reloadData()
-      Toaster.showToast(str: "登录成功")
-      // 设置 navigationBar 左上角和右上角按钮状态
-      self.delegateTopicListsViewController?.setUnreadBadge()
-      self.delegateTopicListsViewController?.setCreateTopicBtn()
-    })
-  }
-  
-  // 扫码失败
-  func qrScannerDidFail(_ controller: UIViewController, error: String) {
-    Toaster.showToast(str: error)
-  }
-  
-  // 取消扫码
-  func qrScannerDidCancel(_ controller: UIViewController) {
-     Toaster.showToast(str: "已取消扫码登录")
   }
 }

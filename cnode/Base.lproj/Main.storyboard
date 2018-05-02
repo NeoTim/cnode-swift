@@ -291,6 +291,7 @@
                         <segue destination="7R5-f4-tTO" kind="show" identifier="changeTopic" id="sSK-UX-WYz"/>
                         <segue destination="djl-Ah-T87" kind="show" identifier="showUser" id="O5D-mZ-2p0"/>
                         <segue destination="kkz-ve-C4r" kind="show" identifier="showSetting" id="sv8-Ur-fu2"/>
+                        <segue destination="vJJ-16-sqL" kind="show" identifier="showLogin" id="fkv-vh-hmt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVB-bt-CcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -543,6 +544,86 @@
             </objects>
             <point key="canvasLocation" x="6641" y="335"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="wV7-o1-Tc8">
+            <objects>
+                <viewController id="vJJ-16-sqL" customClass="LoginViewController" customModule="cnode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NZD-gT-Bh8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Access Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2s-nu-FqR">
+                                <rect key="frame" x="10" y="30" width="355" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hMo-08-1mk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQh-pA-lDe">
+                                <rect key="frame" x="10" y="75" width="355" height="40"/>
+                                <color key="backgroundColor" red="0.50196078431372548" green="0.74117647058823533" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nuf-Aw-Hot"/>
+                                </constraints>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="Acn-Jd-dOF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enk-39-bMh">
+                                <rect key="frame" x="315" y="125" width="50" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="扫码登录">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="b7P-ka-Rur"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-7K-yHd">
+                                <rect key="frame" x="10" y="125" width="99" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="阅读《隐私协议》">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="agreementTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="4Vk-ik-2Ss"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="K2s-nu-FqR" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="AUi-zb-GSt"/>
+                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="MQh-pA-lDe" secondAttribute="trailing" constant="10" id="I2n-9P-XW0"/>
+                            <constraint firstItem="sQc-7K-yHd" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="MND-ge-ofL"/>
+                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="K2s-nu-FqR" secondAttribute="trailing" constant="10" id="SAI-Wc-fcB"/>
+                            <constraint firstItem="enk-39-bMh" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="Shs-b4-kGb"/>
+                            <constraint firstItem="MQh-pA-lDe" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="Vv6-i4-Okh"/>
+                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="enk-39-bMh" secondAttribute="trailing" constant="10" id="c3E-Za-VtC"/>
+                            <constraint firstItem="K2s-nu-FqR" firstAttribute="top" secondItem="IiN-AE-64x" secondAttribute="top" constant="10" id="i2m-jL-k9t"/>
+                            <constraint firstItem="MQh-pA-lDe" firstAttribute="top" secondItem="K2s-nu-FqR" secondAttribute="bottom" constant="5" id="oGX-Hq-iWr"/>
+                            <constraint firstItem="sQc-7K-yHd" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="zG9-5N-OjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IiN-AE-64x"/>
+                    </view>
+                    <connections>
+                        <outlet property="accessTokenTextField" destination="K2s-nu-FqR" id="F69-WS-RJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ub4-2Y-HJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4709.6000000000004" y="-2003.7481259370315"/>
+        </scene>
         <!--关于-->
         <scene sceneID="BwR-VY-yhA">
             <objects>
@@ -704,10 +785,10 @@
             </objects>
             <point key="canvasLocation" x="4710" y="-1299"/>
         </scene>
-        <!--View Controller-->
+        <!--隐私协议-->
         <scene sceneID="exg-JJ-c0x">
             <objects>
-                <viewController id="Peg-10-0hN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="agreementViewController" id="Peg-10-0hN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NU-JU-hme">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -715,7 +796,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-cV-Ahr">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">CNode尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，CNode会按照本隐私权政策的规定使用和披露您的个人信息。但CNode将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，CNode不会将这些信息对外披露或向第三方提供。CNode会不时更新本隐私权政策。 您在同意CNode服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于CNode服务使用协议不可分割的一部分。 
+                                <string key="text">CNode尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，CNode会按照本隐私权政策的规定使用和披露您的个人信息。但CNode将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，CNode不会将这些信息对外披露或向第三方提供。CNode会不时更新本隐私权政策。 您在同意CNode服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于CNode服务使用协议不可分割的一部分。 
 
 1. 适用范围 
 
@@ -775,7 +856,7 @@ c) 通过CNode所设cookies所取得的有关信息，将适用本政策。
 
 a) CNode帐号均有安全保护功能，请妥善保管您的用户名及密码信息。CNode将通过对用户密码进行加密等安全措施确保您的信息不丢失，不被滥用和变造。尽管有前述安全措施，但同时也请您注意在信息网络上不存在“完善的安全措施”。  
 
-b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是CNode用户名及密码发生泄露，请您立即联络CNode客服，以便CNode采取相应措施。</mutableString>
+b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是CNode用户名及密码发生泄露，请您立即联络CNode客服，以便CNode采取相应措施。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -789,6 +870,7 @@ b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="awS-vm-jA9"/>
                     </view>
+                    <navigationItem key="navigationItem" title="隐私协议" id="Yv2-7z-jix"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBA-TO-wom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -862,7 +944,7 @@ b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交
         <!--root-->
         <scene sceneID="lK9-bR-zMZ">
             <objects>
-                <navigationController title="root" automaticallyAdjustsScrollViewInsets="NO" id="Ce8-kQ-Vvt" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootViewController" title="root" automaticallyAdjustsScrollViewInsets="NO" id="Ce8-kQ-Vvt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dbf-yq-Bcx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -958,7 +1040,7 @@ b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交
         <segue reference="1iP-sN-g9z"/>
         <segue reference="O5D-mZ-2p0"/>
         <segue reference="2J3-OS-DKG"/>
-        <segue reference="sSK-UX-WYz"/>
+        <segue reference="bOJ-ZW-3TA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
