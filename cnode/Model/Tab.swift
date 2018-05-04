@@ -12,7 +12,6 @@ enum Tab: String {
   case share = "分享"
   case ask = "问答"
   case job = "招聘"
-  case dev = "测试"
   
   init(tab: String?) {
     if tab == nil {
@@ -24,12 +23,11 @@ enum Tab: String {
     case "share": self = .share
     case "good": self = .good
     case "job": self = .job
-    case "dev": self = .dev
     default: self = .all
     }
   }
-  static let allTabsEn = ["all", "good", "share", "ask", "job", "dev"]
-  static let allTabs = ["全部", "精华", "分享", "问答", "招聘", "测试"]
+  static let allTabsEn = ["all", "good", "share", "ask", "job"]
+  static let allTabs = ["全部", "精华", "分享", "问答", "招聘"]
   static func getTabByName(name: String?) -> String {
     if name == nil {
       return ""
@@ -40,7 +38,6 @@ enum Tab: String {
     case "分享": return "share"
     case "问答": return "ask"
     case "招聘": return "job"
-    case "测试": return "dev"
     default: return "all"
     }
   }

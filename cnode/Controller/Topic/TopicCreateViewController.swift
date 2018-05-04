@@ -31,10 +31,10 @@ class TopicCreateViewController: FormViewController {
     
     form +++ Section("板块")
       <<< PickerInputRow<String>("tab"){
-        $0.options = ["测试", "分享", "问答", "招聘"]
+        $0.options = ["分享", "问答", "招聘"]
         $0.value = topic != nil
           ? Tab(tab: topic!.tab!).rawValue // 编辑帖子则用 topic.tab
-          : (["dev", "share", "ask", "job"].contains(tab) ? Tab(tab: tab).rawValue : "测试") // 在某个 tab 下创建话题用这个 tab
+          : (["share", "ask", "job"].contains(tab) ? Tab(tab: tab).rawValue : "分享") // 在某个 tab 下创建话题用这个 tab
         $0.add(rule: RuleRequired())
       }
     +++ Section("描述")

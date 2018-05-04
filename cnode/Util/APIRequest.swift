@@ -13,6 +13,29 @@ import SwiftyJSON
 class APIRequest {
   static let API_URL = "https://cnodejs.org/api/v1"
   
+  // MARK: - app store check
+  static func isChecking (callback: @escaping (_ checking: Bool) -> Void) {
+    Alamofire.request("https://api.ipify.org/?format=json").responseJSON { response in
+      if response.result.isFailure {
+        callback(true)
+        return
+      }
+      let json = JSON(response.result.value!)
+      Alamofire.request("http://freeapi.ipip.net/" + json["ip"].string!).responseJSON { response in
+        if response.result.isFailure {
+          callback(true)
+          return
+        }
+        let json = JSON(response.result.value!)
+        if json[0].string == "中国" {
+          callback(false)
+        } else {
+          callback(true)
+        }
+      }
+    }
+  }
+  
   // MARK: - 主题
   // 主题首页
   static func getTopics(page: Int? = 1,

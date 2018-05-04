@@ -35,7 +35,7 @@ class MenuViewController: UITableViewController {
     if section == 0 {
       return 1
     } else if section == 1 {
-      return 6
+      return 5
     } else {
       return 1
     }

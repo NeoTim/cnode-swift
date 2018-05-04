@@ -238,29 +238,12 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="WY5-G4-mw5" rowHeight="50" style="IBUITableViewCellStyleDefault" id="iCh-fk-dzD">
-                                        <rect key="frame" x="0.0" y="438" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCh-fk-dzD" id="al6-qH-1nq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="测试" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WY5-G4-mw5">
-                                                    <rect key="frame" x="15" y="0.0" width="344" height="49.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="  其他" id="8S3-ip-gUP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Cnr-JR-bJF" rowHeight="50" style="IBUITableViewCellStyleDefault" id="z4r-0E-Ct8">
-                                        <rect key="frame" x="0.0" y="516" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="466" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4r-0E-Ct8" id="lde-EO-dLc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
@@ -580,16 +563,6 @@
                                     <action selector="loginTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="Acn-Jd-dOF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enk-39-bMh">
-                                <rect key="frame" x="315" y="125" width="50" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="扫码登录">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="scanTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="b7P-ka-Rur"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-7K-yHd">
                                 <rect key="frame" x="10" y="125" width="99" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -600,24 +573,35 @@
                                     <action selector="agreementTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="4Vk-ik-2Ss"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enk-39-bMh">
+                                <rect key="frame" x="315" y="125" width="50" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="扫码登录">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="b7P-ka-Rur"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K2s-nu-FqR" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="AUi-zb-GSt"/>
                             <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="MQh-pA-lDe" secondAttribute="trailing" constant="10" id="I2n-9P-XW0"/>
+                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="enk-39-bMh" secondAttribute="trailing" constant="10" id="M3K-76-jUK"/>
                             <constraint firstItem="sQc-7K-yHd" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="MND-ge-ofL"/>
+                            <constraint firstItem="sQc-7K-yHd" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="OLM-yN-yU9"/>
                             <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="K2s-nu-FqR" secondAttribute="trailing" constant="10" id="SAI-Wc-fcB"/>
                             <constraint firstItem="enk-39-bMh" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="Shs-b4-kGb"/>
                             <constraint firstItem="MQh-pA-lDe" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="Vv6-i4-Okh"/>
-                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="enk-39-bMh" secondAttribute="trailing" constant="10" id="c3E-Za-VtC"/>
                             <constraint firstItem="K2s-nu-FqR" firstAttribute="top" secondItem="IiN-AE-64x" secondAttribute="top" constant="10" id="i2m-jL-k9t"/>
                             <constraint firstItem="MQh-pA-lDe" firstAttribute="top" secondItem="K2s-nu-FqR" secondAttribute="bottom" constant="5" id="oGX-Hq-iWr"/>
-                            <constraint firstItem="sQc-7K-yHd" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="zG9-5N-OjA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IiN-AE-64x"/>
                     </view>
                     <connections>
                         <outlet property="accessTokenTextField" destination="K2s-nu-FqR" id="F69-WS-RJs"/>
+                        <outlet property="scanButton" destination="enk-39-bMh" id="7Eq-Fn-Aw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ub4-2Y-HJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1040,7 +1024,7 @@ b) 在使用CNode网络服务进行网上交易时，您不可避免的要向交
         <segue reference="1iP-sN-g9z"/>
         <segue reference="O5D-mZ-2p0"/>
         <segue reference="2J3-OS-DKG"/>
-        <segue reference="bOJ-ZW-3TA"/>
+        <segue reference="sSK-UX-WYz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

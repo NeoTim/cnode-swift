@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     let agreementViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "agreementViewController")
     self.navigationController?.pushViewController(agreementViewController, animated: true)
   }
+  @IBOutlet weak var scanButton: UIButton!
   @IBAction func scanTap(_ sender: Any) {
     let scanner = QRCodeScannerController()
     scanner.delegate = self
@@ -26,6 +27,13 @@ class LoginViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // app store 审核
+    APIRequest.isChecking(callback: { checking in
+      if checking == false {
+        self.scanButton.isHidden = false
+      }
+    })
   }
   
   func doLogin (accessToken: String) {
