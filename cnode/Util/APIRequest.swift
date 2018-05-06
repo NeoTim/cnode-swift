@@ -9,29 +9,82 @@
 import Alamofire
 import AlamofireObjectMapper
 import SwiftyJSON
+import Ji
 
 class APIRequest {
   static let API_URL = "https://cnodejs.org/api/v1"
   
   // MARK: - app store check
   static func isChecking (callback: @escaping (_ checking: Bool) -> Void) {
-    Alamofire.request("https://api.ipify.org/?format=json").responseJSON { response in
+    Alamofire.request("http://ip-api.com/json").responseJSON { response in
       if response.result.isFailure {
         callback(true)
         return
       }
       let json = JSON(response.result.value!)
-      Alamofire.request("http://freeapi.ipip.net/" + json["ip"].string!).responseJSON { response in
-        if response.result.isFailure {
-          callback(true)
+      if json["country"].string == "China" {
+        callback(false)
+      } else {
+        callback(true)
+      }
+    }
+  }
+  
+  // MARK: - login
+  // 模拟登陆拿到 accessToken
+  static func login (username: String,
+                     password: String,
+                     callback: @escaping (_ err: String?, _ accessToken: String?) -> Void) {
+    let jiDoc = Ji(htmlURL: URL(string: "https://cnodejs.org/signin")!)
+    let csrf = jiDoc?.xPath("//form/input[@type='hidden']")?.first?.attributes["value"]
+    if csrf == nil {
+      callback("网络连接出问题", nil)
+      return
+    }
+    print("csrf: " + csrf!)
+
+    let parameters: Parameters = ["name": username, "pass": password, "_csrf": csrf!]
+    let delegate = Alamofire.SessionManager.default.delegate
+    delegate.taskWillPerformHTTPRedirection = { (_, _, _, _) -> URLRequest? in
+      return nil
+    }
+    Alamofire.request("https://cnodejs.org/signin",
+                      method: .post,
+                      parameters: parameters,
+                      encoding: URLEncoding.httpBody).response { response in
+      if response.error != nil {
+        callback("网络连接出问题", nil)
+        return
+      }
+
+      let headerFields = response.response?.allHeaderFields as? [String: String]
+      let cookie = headerFields?["Set-Cookie"]
+      if cookie == nil {
+        if response.response?.statusCode == 403 {
+          callback("用户名或密码错误", nil)
+        } else {
+          callback("网络连接出问题", nil)
+        }
+        return
+      }
+      let headers: HTTPHeaders = [
+        "Cookie": cookie!
+      ]
+
+      Alamofire.request("https://cnodejs.org/setting",
+                        headers: headers).responseString { response in
+        if response.error != nil {
+          callback("网络连接出问题", nil)
           return
         }
-        let json = JSON(response.result.value!)
-        if json[0].string == "中国" {
-          callback(false)
-        } else {
-          callback(true)
-        }
+        let html = response.result.value as! String
+        let jiDoc = Ji(htmlString: html)
+        let accessTokenString = jiDoc?.xPath("//div[@class='inner']")?.last?.children.first?.content?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let index = accessTokenString!.index(accessTokenString!.endIndex, offsetBy: -36)
+        let accessToken = accessTokenString![index...]
+        print("accessToken: " + accessToken)
+
+        callback(nil, String(accessToken))
       }
     }
   }
@@ -260,7 +313,7 @@ class APIRequest {
       }
       let json = JSON(response.result.value!)
       if !json["success"].bool! {
-        callback("扫码登录失败", nil)
+        callback("Access Token 错误", nil)
         return
       }
       var _userDic: [String: String] = [:]

@@ -22,5 +22,6 @@ target 'cnode' do
   pod 'SwiftQRScanner', :git => 'https://github.com/nswbmw/SwiftQRCodeScanner'
   pod 'PPBadgeViewSwift'
   pod 'Eureka'
+  pod 'Ji'
 
 end

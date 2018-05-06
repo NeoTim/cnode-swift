@@ -8,32 +8,69 @@
 
 import UIKit
 import SwiftQRScanner
+import Eureka
+import SVProgressHUD
 
-class LoginViewController: UIViewController {
-  @IBOutlet weak var accessTokenTextField: UITextField!
-  @IBAction func loginTap(_ sender: Any) {
-    doLogin(accessToken: accessTokenTextField.text ?? "")
-  }
-  @IBAction func agreementTap(_ sender: Any) {
-    let agreementViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "agreementViewController")
-    self.navigationController?.pushViewController(agreementViewController, animated: true)
-  }
-  @IBOutlet weak var scanButton: UIButton!
-  @IBAction func scanTap(_ sender: Any) {
-    let scanner = QRCodeScannerController()
-    scanner.delegate = self
-    self.present(scanner, animated: true, completion: nil)
-  }
-  
+class LoginViewController: FormViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // 扫码
     // app store 审核
     APIRequest.isChecking(callback: { checking in
+      print("isCehcking: " + String(checking))
       if checking == false {
-        self.scanButton.isHidden = false
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "scan"),
+                                                                 landscapeImagePhone: nil,
+                                                                 style: .plain,
+                                                                 target: self,
+                                                                 action: #selector(self.scanTap))
       }
     })
+
+    // 表单
+    form +++ Section()
+      <<< TextRow("username"){ row in
+        row.title = "用户名"
+        row.placeholder = "username"
+        row.add(rule: RuleRequired())
+      }
+      <<< PasswordRow("password"){ row in
+        row.title = "密码"
+        row.placeholder = "password"
+        row.add(rule: RuleRequired())
+      }
+    +++ Section()
+      <<< ButtonRow() {
+          $0.title = "登录"
+        }
+        .onCellSelection { cell, row in
+          guard let username = self.form.rowBy(tag: "username")?.baseValue else {
+            Toaster.showToast(str: "请填写用户名")
+            return
+          }
+          guard let password = self.form.rowBy(tag: "password")?.baseValue else {
+            Toaster.showToast(str: "请填写密码")
+            return
+          }
+          SVProgressHUD.show()
+          APIRequest.login(username: username as! String, password: password as! String, callback: { (err: String?, accessToken: String?) in
+            if err != nil {
+              Toaster.showToast(str: err!)
+              SVProgressHUD.dismiss()
+              return
+            }
+            self.doLogin(accessToken: accessToken!)
+          })
+        }
+    +++ Section()
+      <<< ButtonRow() {
+          $0.title = "阅读《隐私协议》"
+        }
+        .onCellSelection { cell, row in
+          let agreementViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "agreementViewController")
+          self.navigationController?.pushViewController(agreementViewController, animated: true)
+        }
   }
   
   func doLogin (accessToken: String) {
@@ -45,9 +82,17 @@ class LoginViewController: UIViewController {
       Util.setUserInfo(userDic: userDic!)
       let rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "rootViewController")
       self.present(rootViewController, animated: true, completion: nil)
+      SVProgressHUD.dismiss()
       Toaster.showToast(str: "登录成功")
     })
   }
+
+  @objc func scanTap() {
+    let scanner = QRCodeScannerController()
+    scanner.delegate = self
+    self.present(scanner, animated: true, completion: nil)
+  }
+
 }
 
 extension LoginViewController: QRScannerCodeDelegate {

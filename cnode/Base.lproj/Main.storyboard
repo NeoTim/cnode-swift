@@ -530,81 +530,14 @@
         <!--Login View Controller-->
         <scene sceneID="wV7-o1-Tc8">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ub4-2Y-HJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="vJJ-16-sqL" customClass="LoginViewController" customModule="cnode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZD-gT-Bh8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="字符串口令" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2s-nu-FqR">
-                                <rect key="frame" x="10" y="30" width="355" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="hMo-08-1mk"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQh-pA-lDe">
-                                <rect key="frame" x="10" y="75" width="355" height="40"/>
-                                <color key="backgroundColor" red="0.50196078431372548" green="0.74117647058823533" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="nuf-Aw-Hot"/>
-                                </constraints>
-                                <state key="normal" title="登录">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="Acn-Jd-dOF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-7K-yHd">
-                                <rect key="frame" x="10" y="125" width="99" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="阅读《隐私协议》">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="agreementTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="4Vk-ik-2Ss"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enk-39-bMh">
-                                <rect key="frame" x="315" y="125" width="50" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="扫码登录">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="scanTap:" destination="vJJ-16-sqL" eventType="touchUpInside" id="b7P-ka-Rur"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="K2s-nu-FqR" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="AUi-zb-GSt"/>
-                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="MQh-pA-lDe" secondAttribute="trailing" constant="10" id="I2n-9P-XW0"/>
-                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="enk-39-bMh" secondAttribute="trailing" constant="10" id="M3K-76-jUK"/>
-                            <constraint firstItem="sQc-7K-yHd" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="MND-ge-ofL"/>
-                            <constraint firstItem="sQc-7K-yHd" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="OLM-yN-yU9"/>
-                            <constraint firstItem="IiN-AE-64x" firstAttribute="trailing" secondItem="K2s-nu-FqR" secondAttribute="trailing" constant="10" id="SAI-Wc-fcB"/>
-                            <constraint firstItem="enk-39-bMh" firstAttribute="top" secondItem="MQh-pA-lDe" secondAttribute="bottom" constant="10" id="Shs-b4-kGb"/>
-                            <constraint firstItem="MQh-pA-lDe" firstAttribute="leading" secondItem="IiN-AE-64x" secondAttribute="leading" constant="10" id="Vv6-i4-Okh"/>
-                            <constraint firstItem="K2s-nu-FqR" firstAttribute="top" secondItem="IiN-AE-64x" secondAttribute="top" constant="10" id="i2m-jL-k9t"/>
-                            <constraint firstItem="MQh-pA-lDe" firstAttribute="top" secondItem="K2s-nu-FqR" secondAttribute="bottom" constant="5" id="oGX-Hq-iWr"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="IiN-AE-64x"/>
                     </view>
-                    <connections>
-                        <outlet property="accessTokenTextField" destination="K2s-nu-FqR" id="F69-WS-RJs"/>
-                        <outlet property="scanButton" destination="enk-39-bMh" id="7Eq-Fn-Aw1"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ub4-2Y-HJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4709.6000000000004" y="-2003.7481259370315"/>
         </scene>
