@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Alamofire
 
 class MenuViewController: UITableViewController {
   @IBOutlet weak var avatarImage: UIImageView!
@@ -37,7 +38,7 @@ class MenuViewController: UITableViewController {
     } else if section == 1 {
       return 5
     } else {
-      return 1
+      return 2
     }
   }
 
@@ -58,8 +59,35 @@ class MenuViewController: UITableViewController {
       let tabNameEn = Tab.allTabsEn[indexPath.row]
       performSegue(withIdentifier: "changeTopic", sender: tabNameEn)
     } else if indexPath.section == 2 {
-      // 其他
-      performSegue(withIdentifier: "showSetting", sender: nil)
+      // 搜索
+      if indexPath.row == 0 {
+        weak var pvc = self.presentingViewController
+        // 隐藏侧边栏
+        self.dismiss(animated: true, completion: {
+          // 弹出搜索框
+          let alertController = UIAlertController(title: "CNode 帖子",
+                                                  message: nil,
+                                                  preferredStyle: .alert)
+          alertController.addTextField {
+            (textField: UITextField!) -> Void in
+            textField.placeholder = "关键字"
+          }
+          
+          let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+          let okAction = UIAlertAction(title: "Google 搜索", style: .default, handler: { action in
+            let keyword = alertController.textFields!.first!    
+            let searchResultWKWebViewController = SearchResultWKWebViewController(keyword: keyword.text!)
+            self.delegateTopicListsViewController?.navigationController?.pushViewController(searchResultWKWebViewController, animated: true)
+          })
+          alertController.addAction(cancelAction)
+          alertController.addAction(okAction)
+          pvc?.present(alertController, animated: true, completion: nil)
+        })
+      }
+      if indexPath.row == 1 {
+        // 关于
+        performSegue(withIdentifier: "showSetting", sender: nil)
+      }
     }
   }
   
