@@ -37,6 +37,10 @@ class SearchResultWKWebViewController: UIViewController, WKNavigationDelegate {
     self.view.addSubview(webview)
   }
   
+  override func viewDidDisappear(_ animated: Bool) {
+    SVProgressHUD.dismiss()
+  }
+  
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     SVProgressHUD.dismiss()
   }

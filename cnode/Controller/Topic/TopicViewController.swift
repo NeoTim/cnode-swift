@@ -48,6 +48,10 @@ class TopicViewController: UITableViewController {
     loadTopic()
   }
   
+  override func viewDidDisappear(_ animated: Bool) {
+    SVProgressHUD.dismiss()
+  }
+  
   // MARK: - tableView
   // 单元格数量
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
