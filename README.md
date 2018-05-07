@@ -2,6 +2,10 @@
 
 > Better [CNode](https://cnodejs.org/) client on iOS platform.
 
+## App Store
+
+[![](https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)](https://itunes.apple.com/app/id1376632178)
+
 ## Screenshots
 
 主页 | 未登录 | 扫码 | 已登录
