@@ -1,10 +1,13 @@
-## cnode-swift
-
-> Better [CNode](https://cnodejs.org/) client on iOS platform.
-
-## App Store
-
-[![](https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)](https://itunes.apple.com/app/id1376632178)
+<h1 align="center">
+<img src="./cnode/Assets.xcassets/AppIcon.appiconset/logo-radius.png" alt="CNode" width="200" />
+<br>
+CNode
+</h1>
+<h4 align="center">
+Better <a href="https://cnodejs.org/">CNode</a> client on iOS platform.
+<br><br>
+<a href="https://itunes.apple.com/app/id1376632178"><img src="https://devimages-cdn.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" /></a>
+</h4>
 
 ## Screenshots
 
